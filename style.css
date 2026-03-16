@@ -1,27 +1,31 @@
-/* Reset & Base */
+/* --- Reset & Base --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    min-height: 100vh;
+    background-color: #1a1a2e;
+    line-height: 1.6;
 }
 
-/* Navigation */
+/* --- Navigation --- */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 1.5rem 2rem; /* Aumentato padding */
-    background: rgba(26, 26, 46, 0.2); /* Leggera tinta per leggibilità */
-    backdrop-filter: blur(5px);
+    padding: 1.5rem 2rem;
+    background: rgba(26, 26, 46, 0.4);
+    backdrop-filter: blur(10px);
 }
 
 .nav-container {
@@ -38,7 +42,7 @@ body {
     gap: 0.75rem;
     color: white;
     font-weight: 700;
-    font-size: 1.6rem; /* Ingrandito da 1.25rem */
+    font-size: 1.6rem;
 }
 
 .nav-links {
@@ -50,7 +54,7 @@ body {
 .nav-links a {
     color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
-    font-size: 1.1rem; /* Ingrandito da 0.95rem */
+    font-size: 1.1rem;
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -59,7 +63,7 @@ body {
     color: white;
 }
 
-/* Hero Section */
+/* --- Hero Section --- */
 .hero {
     min-height: 100vh;
     position: relative;
@@ -90,9 +94,9 @@ body {
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
-    padding: 8rem 2rem 2rem; /* Aumentato padding top per navbar più grande */
+    padding: 8rem 2rem 2rem;
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr; /* Leggermente più spazio al testo */
+    grid-template-columns: 1.2fr 0.8fr;
     gap: 4rem;
     align-items: center;
 }
@@ -109,28 +113,27 @@ body {
     backdrop-filter: blur(10px);
     padding: 0.6rem 1.2rem;
     border-radius: 50px;
-    font-size: 1rem; /* Ingrandito */
+    font-size: 1rem;
     margin-bottom: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .hero-text h1 {
-    font-size: 4.5rem; /* Ingrandito da 3.5rem */
+    font-size: 4.5rem;
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 2rem;
 }
 
-.hero-text h1 .highlight {
-    color: #FFB800;
+.highlight {
+    color: #FFB800; /* Giallo Hero */
 }
 
 .hero-text p {
-    font-size: 1.3rem; /* Ingrandito da 1.05rem */
-    line-height: 1.6;
+    font-size: 1.3rem;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 2.5rem;
-    max-width: 650px; /* Allargato per il testo più grande */
+    max-width: 650px;
 }
 
 .hero-buttons {
@@ -139,13 +142,14 @@ body {
 }
 
 .btn {
-    padding: 1.1rem 2.2rem; /* Bottoni più grandi */
+    padding: 1.1rem 2.2rem;
     border-radius: 10px;
     font-size: 1.1rem;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
     cursor: pointer;
+    border: none;
 }
 
 .btn-primary {
@@ -169,60 +173,162 @@ body {
     transform: translateY(-3px);
 }
 
-/* Image Frame */
-.image-frame {
-    position: relative;
-    width: 100%;
-    max-width: 500px; /* Leggermente più grande */
-    border-radius: 30px;
-    overflow: hidden;
-    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+/* --- Team Section --- */
+.team-section {
+    padding: 100px 20px;
+    background-color: #f4f7f6; /* Sfondo chiaro per pulizia */
+    color: #333;
 }
 
-.image-frame img {
-    width: 100%;
-    display: block;
-    transition: transform 0.5s ease;
+.team-container {
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
-.image-frame:hover img {
-    transform: scale(1.05);
-}
-
-/* Scroll Indicator */
-.scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
+.team-header {
     text-align: center;
-    color: white;
+    margin-bottom: 60px;
 }
 
-.scroll-line {
-    width: 2px;
-    height: 50px;
-    background: linear-gradient(to bottom, white, transparent);
-    margin: 0 auto 10px;
+.team-header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #1a1a2e;
 }
 
-/* Responsive */
+.team-header .highlight {
+    color: #4a148c; /* Viola per sezione Team */
+}
+
+/* Griglia Team Ordinata */
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra gli elementi dell'ultima riga */
+    gap: 30px;
+    width: 100%;
+}
+
+.team-card {
+    background-color: #ffffff;
+    padding: 40px 25px;
+    border-radius: 20px;
+    /* 4 colonne per riga meno il gap */
+    width: calc(25% - 30px); 
+    min-width: 280px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Avatar Boxes */
+.avatar-box {
+    width: 90px;
+    height: 90px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+/* Gradienti */
+.purple-gradient { background: linear-gradient(135deg, #7b1fa2, #4a148c); }
+.blue-gradient { background: linear-gradient(135deg, #1976d2, #0d47a1); }
+.orange-gradient { background: linear-gradient(135deg, #f57c00, #e65100); }
+.teal-gradient { background: linear-gradient(135deg, #00796b, #004d40); }
+
+.member-info h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #1a1a2e;
+}
+
+.member-info p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+/* --- Responsività --- */
 @media (max-width: 1200px) {
-    .hero-text h1 { font-size: 3.5rem; }
-    .hero-content { gap: 2rem; }
+    .team-card { width: calc(33.33% - 30px); } /* 3 per riga su schermi medi */
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
     }
-    .hero-text p { margin-left: auto; margin-right: auto; }
+    .hero-text h1 { font-size: 3rem; }
     .hero-buttons { justify-content: center; }
+    .team-card { width: calc(50% - 30px); } /* 2 per riga su tablet */
 }
 
-@media (max-width: 768px) {
-    .nav-links { display: none; }
-    .hero-text h1 { font-size: 2.8rem; }
-    .hero-text p { font-size: 1.1rem; }
+@media (max-width: 600px) {
+    .team-card { width: 100%; } /* 1 per riga su mobile */
+    .hero-text h1 { font-size: 2.2rem; }
+}
+
+/* Sezione Hero Image - Versione Tonda e Piccola */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-frame {
+    /* Dimensioni ridotte e uguali per fare un cerchio */
+    width: 680px; 
+    height: 680px;
+    
+    /* Trasformazione in cerchio */
+    border-radius: 3%;
+    overflow: hidden;
+    
+    /* Stile estetico */
+    border: 6px solid rgba(255, 255, 255, 0.2); /* Bordino semitrasparente */
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); /* Ombra profonda per dare risalto */
+    
+    /* Layout interno */
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    z-index: 5;
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    /* Fondamentale: mantiene le proporzioni ritagliando i bordi in eccesso */
+    object-fit: cover; 
+    /* Se Nao sembra troppo basso o alto nel cerchio, usa object-position */
+    object-position: center; 
+    
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Effetto al passaggio del mouse */
+.image-frame:hover img {
+    transform: scale(1.1); /* Zoom leggero e fluido */
 }
