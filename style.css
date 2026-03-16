@@ -19,8 +19,9 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    padding: 1rem 2rem;
-    background: transparent;
+    padding: 1.5rem 2rem; /* Aumentato padding */
+    background: rgba(26, 26, 46, 0.2); /* Leggera tinta per leggibilità */
+    backdrop-filter: blur(5px);
 }
 
 .nav-container {
@@ -36,14 +37,8 @@ body {
     align-items: center;
     gap: 0.75rem;
     color: white;
-    font-weight: 600;
-    font-size: 1.25rem;
-}
-
-.logo-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-weight: 700;
+    font-size: 1.6rem; /* Ingrandito da 1.25rem */
 }
 
 .nav-links {
@@ -55,7 +50,7 @@ body {
 .nav-links a {
     color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 1.1rem; /* Ingrandito da 0.95rem */
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -80,39 +75,13 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-        linear-gradient(135deg, 
-            rgba(64, 156, 255, 0.6) 0%, 
-            rgba(100, 180, 255, 0.4) 25%,
-            rgba(147, 112, 219, 0.4) 50%,
-            rgba(186, 85, 211, 0.5) 75%,
-            rgba(138, 43, 226, 0.4) 100%
-        );
-    background-size: cover;
-}
-
-.hero-background::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(ellipse at 20% 50%, rgba(0, 191, 255, 0.3) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 50%, rgba(186, 85, 211, 0.3) 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 100%, rgba(100, 149, 237, 0.2) 0%, transparent 50%);
-}
-
-.hero-background::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="[w3.org](http://www.w3.org/2000/svg)" viewBox="0 0 100 100"><circle cx="20" cy="30" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="70" r="3" fill="rgba(255,255,255,0.08)"/><circle cx="50" cy="20" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
-    opacity: 0.5;
+    background: linear-gradient(135deg, 
+        rgba(64, 156, 255, 0.6) 0%, 
+        rgba(100, 180, 255, 0.4) 25%,
+        rgba(147, 112, 219, 0.4) 50%,
+        rgba(186, 85, 211, 0.5) 75%,
+        rgba(138, 43, 226, 0.4) 100%
+    );
 }
 
 .hero-content {
@@ -121,9 +90,9 @@ body {
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
-    padding: 6rem 2rem 2rem;
+    padding: 8rem 2rem 2rem; /* Aumentato padding top per navbar più grande */
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 0.8fr; /* Leggermente più spazio al testo */
     gap: 4rem;
     align-items: center;
 }
@@ -138,23 +107,18 @@ body {
     gap: 0.5rem;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    padding: 0.5rem 1rem;
+    padding: 0.6rem 1.2rem;
     border-radius: 50px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
+    font-size: 1rem; /* Ingrandito */
+    margin-bottom: 2rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.badge-icon {
-    font-size: 1rem;
-}
-
 .hero-text h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    line-height: 1.15;
-    margin-bottom: 1.5rem;
+    font-size: 4.5rem; /* Ingrandito da 3.5rem */
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 2rem;
 }
 
 .hero-text h1 .highlight {
@@ -162,31 +126,26 @@ body {
 }
 
 .hero-text p {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.85);
-    margin-bottom: 2rem;
-    max-width: 500px;
+    font-size: 1.3rem; /* Ingrandito da 1.05rem */
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2.5rem;
+    max-width: 650px; /* Allargato per il testo più grande */
 }
 
 .hero-buttons {
     display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
 .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.875rem 1.75rem;
-    border-radius: 8px;
-    font-size: 0.95rem;
+    padding: 1.1rem 2.2rem; /* Bottoni più grandi */
+    border-radius: 10px;
+    font-size: 1.1rem;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
     cursor: pointer;
-    border: none;
 }
 
 .btn-primary {
@@ -195,63 +154,39 @@ body {
 }
 
 .btn-primary:hover {
-    background: #e6a600;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(255, 184, 0, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 184, 0, 0.4);
 }
 
 .btn-secondary {
     background: transparent;
     color: white;
-    border: 2px solid rgba(255, 255, 255, 0.4);
+    border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .btn-secondary:hover {
     background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.6);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
 }
 
-/* Hero Image */
-.hero-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+/* Image Frame */
 .image-frame {
     position: relative;
     width: 100%;
-    max-width: 450px;
-    border-radius: 20px;
+    max-width: 500px; /* Leggermente più grande */
+    border-radius: 30px;
     overflow: hidden;
-    box-shadow: 
-        0 25px 80px rgba(0, 0, 0, 0.4),
-        0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.image-frame::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        180deg,
-        transparent 0%,
-        transparent 60%,
-        rgba(0, 0, 0, 0.1) 100%
-    );
-    z-index: 1;
-    pointer-events: none;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
 }
 
 .image-frame img {
     width: 100%;
-    height: auto;
     display: block;
-    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-frame:hover img {
+    transform: scale(1.05);
 }
 
 /* Scroll Indicator */
@@ -260,101 +195,34 @@ body {
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    color: rgba(255, 255, 255, 0.6);
-    z-index: 10;
+    text-align: center;
+    color: white;
 }
 
 .scroll-line {
-    width: 1px;
-    height: 40px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
-}
-
-.scroll-indicator span {
-    font-size: 1.25rem;
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(5px);
-    }
-    60% {
-        transform: translateY(3px);
-    }
+    width: 2px;
+    height: 50px;
+    background: linear-gradient(to bottom, white, transparent);
+    margin: 0 auto 10px;
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+    .hero-text h1 { font-size: 3.5rem; }
+    .hero-content { gap: 2rem; }
+}
+
 @media (max-width: 1024px) {
     .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 3rem;
     }
-    
-    .hero-text p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .hero-buttons {
-        justify-content: center;
-    }
-    
-    .hero-text h1 {
-        font-size: 2.75rem;
-    }
-    
-    .image-frame {
-        max-width: 380px;
-    }
+    .hero-text p { margin-left: auto; margin-right: auto; }
+    .hero-buttons { justify-content: center; }
 }
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    
-    .hero-text h1 {
-        font-size: 2.25rem;
-    }
-    
-    .hero-text p {
-        font-size: 0.95rem;
-    }
-    
-    .hero-content {
-        padding: 5rem 1.5rem 2rem;
-    }
-    
-    .image-frame {
-        max-width: 320px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-text h1 {
-        font-size: 1.875rem;
-    }
-    
-    .btn {
-        padding: 0.75rem 1.5rem;
-        font-size: 0.875rem;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .hero-buttons .btn {
-        width: 100%;
-    }
+    .nav-links { display: none; }
+    .hero-text h1 { font-size: 2.8rem; }
+    .hero-text p { font-size: 1.1rem; }
 }
