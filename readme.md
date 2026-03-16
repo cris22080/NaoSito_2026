@@ -1,1 +1,1 @@
-odio le persone basse che non la pensanso come meX
+il sito di NotAnObject, ancora in lavorazione ma con tante sorprese!!!
