@@ -390,3 +390,14 @@ body {
 .image-frame:hover img {
     transform: scale(1.1); /* Zoom leggero e fluido */
 }
+
+/* --- Footer --- */
+footer {
+    background: #0f0f1e;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    padding: 2.5rem;
+    font-size: 0.95rem;
+}
+
+footer span { color: #FFB800; font-weight: 600; }
