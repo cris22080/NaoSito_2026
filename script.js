@@ -1,4 +1,4 @@
-// Crea particelle di sfondo
+// Crea particelle di sfondo (originale)
 const particlesContainer = document.getElementById('particles');
 for (let i = 0; i < 30; i++) {
     const particle = document.createElement('div');
@@ -10,7 +10,7 @@ for (let i = 0; i < 30; i++) {
 }
 
 // Gestione scroll
-const robot = document.getElementById('naoRobot');
+const robotWrapper = document.getElementById('naoRobotWrapper');
 const robotContainer = document.getElementById('robotContainer');
 const scrollDots = document.querySelectorAll('.scroll-dot');
 
@@ -26,26 +26,18 @@ window.addEventListener('scroll', () => {
     scrollVelocity = scrollY - lastScrollY;
     lastScrollY = scrollY;
     
-    // Muovi il robot verticalmente in base allo scroll
+    // Muovi il robot verticalmente in base allo scroll (originale)
     const verticalOffset = scrollPercent * 200 - 100;
     robotContainer.style.transform = `translateY(calc(-50% + ${verticalOffset}px))`;
     
-    // Inclina il robot in base alla direzione dello scroll
+    // Inclina il wrapper dell'iframe in base alla direzione dello scroll
+    // Questo inclinerà l'intero visualizzatore
     const tiltAngle = Math.min(Math.max(scrollVelocity * 0.5, -15), 15);
-    robot.style.transform = `rotateX(${tiltAngle}deg)`;
+    robotWrapper.style.transform = `rotateX(${tiltAngle}deg)`;
     
-    // Aggiorna indicatori scroll
+    // Aggiorna indicatori scroll (originale)
     const sectionIndex = Math.floor(scrollPercent * 4);
     scrollDots.forEach((dot, index) => {
         dot.classList.toggle('active', index === sectionIndex);
     });
-});
-
-// Effetto hover sul robot
-robotContainer.addEventListener('mouseenter', () => {
-    robot.style.animationPlayState = 'paused';
-});
-
-robotContainer.addEventListener('mouseleave', () => {
-    robot.style.animationPlayState = 'running';
 });

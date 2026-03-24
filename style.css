@@ -649,68 +649,90 @@ body {
     50% { transform: rotate(-20deg); }
 }
 
-/* Mani */
-.hand {
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 14px;
-    height: 14px;
-    background: linear-gradient(180deg, #f5f5f5, #d5d5d5);
-    border-radius: 50%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Anche/Bacino */
-.hips {
-    width: 60px;
+body {
+    min-height: 400vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+}
+
+.content {
+    max-width: 60%;
+    padding: 50px;
+    color: #fff;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.section {
+    padding: 100px 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Container Robot */
+.robot-container {
+    position: fixed;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    perspective: 1000px;
+    z-index: 1000;
+}
+
+/* Piattaforma originale */
+.platform {
+    width: 120px;
     height: 20px;
-    background: linear-gradient(180deg, #d0d0d0, #b0b0b0);
-    margin: 0 auto;
-    border-radius: 10px;
+    background: linear-gradient(180deg, #3a3a3a, #1a1a1a);
+    border-radius: 50%;
+    margin-top: 10px;
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+    animation: platformGlow 2s ease-in-out infinite;
 }
 
-/* Gambe */
-.legs {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+@keyframes platformGlow {
+    0%, 100% { box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3); }
+    50% { box-shadow: 0 10px 50px rgba(0, 212, 255, 0.6); }
 }
 
-.leg {
-    width: 22px;
-    height: 55px;
-    background: linear-gradient(180deg, #ffffff, #e0e0e0, #c0c0c0);
-    border-radius: 8px 8px 5px 5px;
-    position: relative;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+/* Wrapper per l'iframe di Meshy */
+.nao-robot-wrapper {
+    width: 250px; /* Regola la larghezza del visualizzatore */
+    height: 350px; /* Regola l'altezza del visualizzatore */
+    border-radius: 20px;
+    overflow: hidden; /* Mantiene l'iframe dentro il bordo */
+    background: transparent;
+    transition: transform 0.1s ease-out; /* Transizione fluida per l'inclinazione */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Ombra opzionale */
 }
 
-/* Ginocchio */
-.knee {
-    position: absolute;
-    width: 18px;
-    height: 10px;
-    background: linear-gradient(180deg, #c0c0c0, #a0a0a0);
-    border-radius: 5px;
-    top: 25px;
-    left: 50%;
-    transform: translateX(-50%);
+/* Assicura che l'iframe occupi tutto il wrapper */
+.nao-robot-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
-/* Piedi */
-.foot {
-    position: absolute;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 28px;
-    height: 12px;
-    background: linear-gradient(180deg, #e0e0e0, #c0c0c0);
-    border-radius: 5px 5px 8px 8px;
-}
-
-/* Indicatore scroll */
+/* Indicatore scroll originale */
 .scroll-indicator {
     position: fixed;
     left: 30px;
@@ -734,7 +756,7 @@ body {
     box-shadow: 0 0 15px #00d4ff;
 }
 
-/* Particelle di sfondo */
+/* Particelle di sfondo originali */
 .particles {
     position: fixed;
     top: 0;
