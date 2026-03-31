@@ -785,98 +785,111 @@ body {
     90% { opacity: 1; }
     100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
 }
-/* === SEZIONE SCALA === */
+/* === SEZIONE SCALA EMOZIONI - VERSIONE MIGLIORATA === */
 .emotion-scale-section {
     padding: 120px 20px;
     text-align: center;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     color: white;
 }
 
 .scale-title {
-    font-size: 3rem;
-    margin-bottom: 80px;
-    background: linear-gradient(90deg, #00d4ff, #7b2cbf);
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 70px;
+    background: linear-gradient(90deg, #00d4ff, #c026d3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-/* CONTENITORE */
-.emotion-scale {
+.emotion-map {
     position: relative;
-    max-width: 400px;
-    margin: auto;
-}
-
-/* LINEA VERTICALE */
-.line {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(to bottom, #00d4ff, #7b2cbf);
-    border-radius: 10px;
-    box-shadow: 0 0 20px #00d4ff;
-}
-
-/* ELEMENTI */
-.emotion-item {
-    position: relative;
-    margin: 40px 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-
-    opacity: 0;
-    transform: translateY(40px);
-    animation: fadeUp 0.6s ease forwards;
 }
 
-/* animazione a cascata */
-.emotion-item:nth-child(2) { animation-delay: 0.1s; }
-.emotion-item:nth-child(3) { animation-delay: 0.2s; }
-.emotion-item:nth-child(4) { animation-delay: 0.3s; }
-.emotion-item:nth-child(5) { animation-delay: 0.4s; }
-.emotion-item:nth-child(6) { animation-delay: 0.5s; }
-.emotion-item:nth-child(7) { animation-delay: 0.6s; }
-.emotion-item:nth-child(8) { animation-delay: 0.7s; }
-.emotion-item:nth-child(9) { animation-delay: 0.8s; }
-.emotion-item:nth-child(10){ animation-delay: 0.9s; }
-
-/* EMOJI */
-.emoji {
-    font-size: 2rem;
-    background: #1a1a2e;
-    padding: 10px;
-    border-radius: 50%;
-    border: 3px solid #00d4ff;
-    box-shadow: 0 0 15px #00d4ff;
-    transition: 0.3s;
+.heart {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    animation: pulse 1.8s infinite ease-in-out;
 }
 
-/* LABEL */
-.label {
-    background: rgba(255,255,255,0.1);
-    padding: 10px 20px;
+.main-line {
+    width: 5px;
+    height: 70px;
+    background: linear-gradient(to bottom, #ff4d6d, #7b2cbf);
+    margin-bottom: 50px;
     border-radius: 10px;
-    backdrop-filter: blur(10px);
 }
 
-/* HOVER */
-.emotion-item:hover .emoji {
-    transform: scale(1.3) rotate(10deg);
-    box-shadow: 0 0 30px #7b2cbf;
+.emotion-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 35px 25px;
+    max-width: 1100px;
+    width: 100%;
+    justify-content: center;
 }
 
-.emotion-item:hover .label {
-    background: rgba(0,212,255,0.2);
+.emotion {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-/* ANIMAZIONE */
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+.emotion span {
+    display: inline-block;
+    font-size: 2.8rem;
+    background: #1a1a2e;
+    padding: 18px;
+    border-radius: 50%;
+    border: 4px solid #00d4ff;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+    transition: all 0.4s ease;
+}
+
+.emotion p {
+    margin-top: 14px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.9);
+}
+
+.emotion:hover {
+    transform: translateY(-8px);
+}
+
+.emotion span:hover {
+    transform: scale(1.25) rotate(8deg);
+    border-color: #c026d3;
+    box-shadow: 0 0 30px rgba(192, 38, 211, 0.7);
+}
+
+/* Animazione cuore */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+}
+
+/* Responsività extra */
+@media (max-width: 768px) {
+    .scale-title {
+        font-size: 2.5rem;
+    }
+    .emotion-row {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        gap: 25px 15px;
+    }
+    .emotion span {
+        font-size: 2.4rem;
+        padding: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .emotion-row {
+        gap: 20px 10px;
     }
 }
