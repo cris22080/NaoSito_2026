@@ -1028,7 +1028,7 @@ footer span { color: #FFB800; font-weight: 600; }
 /* GRIGLIA EMOZIONI */
 .emotion-row {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -1130,4 +1130,25 @@ footer span { color: #FFB800; font-weight: 600; }
     .emotion-row {
         gap: 22px 15px;
     }
+}
+.emotion-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8px;
+    gap: 5px;
+}
+
+.emotion-line {
+    width: 2px;
+    height: 20px;
+    background: linear-gradient(to bottom, #00d4ff, #7b2cbf);
+    border-radius: 2px;
+}
+
+.emotion-name {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 500;
+    white-space: nowrap;
 }
