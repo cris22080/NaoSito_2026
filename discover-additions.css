@@ -1,0 +1,267 @@
+/* ================================================
+   AGGIUNTE CSS — Sezione Discover (Homepage)
+   Da incollare in fondo al file style.css
+   ================================================ */
+
+/* --- Discover Section --- */
+.discover-section {
+    padding: 120px 20px;
+    background-color: #12122a;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Sfondo decorativo sottile */
+.discover-section::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(74, 20, 140, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.discover-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Header della sezione */
+.discover-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.discover-label {
+    display: inline-block;
+    background: rgba(255, 184, 0, 0.12);
+    color: #FFB800;
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+    border: 1px solid rgba(255, 184, 0, 0.25);
+}
+
+.discover-header h2 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+}
+
+.highlight-purple {
+    color: #a78bfa;
+}
+
+.discover-header p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.55);
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+/* Grid delle card */
+.discover-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: start;
+}
+
+/* Card base */
+.discover-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+    overflow: hidden;
+    /* Animazione ingresso */
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 0.7s ease forwards;
+}
+
+.discover-card:nth-child(1) { animation-delay: 0.1s; }
+.discover-card:nth-child(2) { animation-delay: 0.25s; }
+.discover-card:nth-child(3) { animation-delay: 0.4s; }
+
+.discover-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Card in evidenza (Team) */
+.discover-card.card-featured {
+    background: rgba(255, 184, 0, 0.05);
+    border-color: rgba(255, 184, 0, 0.2);
+    transform: translateY(-8px); /* leggermente sollevata di default */
+}
+
+.discover-card.card-featured:hover {
+    transform: translateY(-18px);
+    border-color: rgba(255, 184, 0, 0.4);
+    box-shadow: 0 28px 70px rgba(255, 184, 0, 0.15);
+}
+
+/* Effetto glow decorativo in background */
+.card-glow {
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    opacity: 0.12;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+.discover-card:hover .card-glow { opacity: 0.2; }
+
+.glow-blue   { background: radial-gradient(circle, #4A90E2, transparent); }
+.glow-yellow { background: radial-gradient(circle, #FFB800, transparent); }
+.glow-purple { background: radial-gradient(circle, #7b2cbf, transparent); }
+
+/* Parte superiore della card */
+.card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-icon-wrap {
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.card-emoji {
+    font-size: 1.7rem;
+    line-height: 1;
+}
+
+.card-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+}
+
+/* Corpo testuale */
+.card-body {
+    flex: 1;
+}
+
+.card-body h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.8rem;
+    line-height: 1.25;
+}
+
+.card-body p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.75;
+    margin: 0;
+}
+
+/* Bottone della card */
+.card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.6rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.card-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.card-btn:hover svg {
+    transform: translateX(4px);
+}
+
+.card-btn-blue {
+    background: rgba(74, 144, 226, 0.15);
+    color: #7ab8f5;
+    border: 1px solid rgba(74, 144, 226, 0.3);
+}
+
+.card-btn-blue:hover {
+    background: rgba(74, 144, 226, 0.28);
+    border-color: rgba(74, 144, 226, 0.5);
+    color: #a8d1ff;
+}
+
+.card-btn-yellow {
+    background: rgba(255, 184, 0, 0.15);
+    color: #FFB800;
+    border: 1px solid rgba(255, 184, 0, 0.35);
+}
+
+.card-btn-yellow:hover {
+    background: rgba(255, 184, 0, 0.28);
+    border-color: rgba(255, 184, 0, 0.55);
+    color: #ffd05e;
+}
+
+.card-btn-purple {
+    background: rgba(123, 44, 191, 0.15);
+    color: #b07ef5;
+    border: 1px solid rgba(123, 44, 191, 0.35);
+}
+
+.card-btn-purple:hover {
+    background: rgba(123, 44, 191, 0.28);
+    border-color: rgba(123, 44, 191, 0.55);
+    color: #c9a4ff;
+}
+
+/* Responsività */
+@media (max-width: 1000px) {
+    .discover-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .discover-card.card-featured {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 640px) {
+    .discover-grid {
+        grid-template-columns: 1fr;
+    }
+    .discover-header h2 {
+        font-size: 2.2rem;
+    }
+}
