@@ -986,3 +986,148 @@ footer span { color: #FFB800; font-weight: 600; }
     .image-frame { width: 320px; height: 320px; }
     .nav-links { display: none; /* Inserire qui un eventuale hamburger menu logica */ }
 }
+/* === SEZIONE SCALA EMOZIONI - VERSIONE MIGLIORATA === */
+/* === SEZIONE SCALA EMOZIONI - UNA RIGA SU SCHERMI GRANDI === */
+.emotion-scale-section {
+    padding: 140px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white;
+}
+
+.scale-title {
+    font-size: 3.3rem;
+    font-weight: 800;
+    margin-bottom: 80px;
+    background: linear-gradient(90deg, #00d4ff, #c026d3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.emotion-map {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heart {
+    font-size: 3.8rem;
+    margin-bottom: 30px;
+    animation: pulse 1.8s infinite ease-in-out;
+}
+
+.main-line {
+    width: 5px;
+    height: 80px;
+    background: linear-gradient(to bottom, #ff4d6d, #7b2cbf);
+    margin-bottom: 60px;
+    border-radius: 10px;
+}
+
+/* GRIGLIA EMOZIONI */
+.emotion-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1400px;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.emotion {
+    text-align: center;
+    flex: 1 1 0;        /* ← si restringono proporzionalmente */
+    min-width: 0;       /* ← permette di restringersi sotto il minimo */
+}
+
+.emotion span {
+    display: inline-block;
+    font-size: 2.2rem;  /* ← ridotto */
+    background: #1a1a2e;
+    padding: 14px;      /* ← ridotto */
+    border-radius: 50%;
+    border: 4px solid #00d4ff;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+    transition: all 0.4s ease;
+}
+
+.emotion p {
+    margin-top: 10px;
+    font-size: 0.85rem; /* ← ridotto */
+    font-weight: 500;
+    color: rgba(255,255,255,0.9);
+    white-space: nowrap; /* ← evita che il testo vada a capo */
+}
+
+/* Hover effect */
+.emotion:hover {
+    transform: translateY(-10px);
+}
+
+.emotion span:hover {
+    transform: scale(1.28) rotate(10deg);
+    border-color: #c026d3;
+    box-shadow: 0 0 35px rgba(192, 38, 211, 0.8);
+}
+
+/* Animazione cuore */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.28); }
+}
+
+/* ===================== RESPONSIVITÀ ===================== */
+
+/* Su schermi GRANDI → tutto su UNA sola riga */
+@media (min-width: 1200px) {
+    .emotion-row {
+        gap: 45px;
+    }
+    .emotion span {
+        font-size: 3.1rem;
+        padding: 20px;
+    }
+}
+
+/* Su tablet e schermi medi → ancora su una riga ma con gap più piccolo */
+@media (max-width: 1199px) {
+    .emotion-row {
+        gap: 25px;
+        padding: 15px 10px;
+    }
+    .emotion span {
+        font-size: 2.6rem;
+        padding: 16px;
+    }
+    .emotion p {
+        font-size: 0.98rem;
+    }
+}
+
+/* Su mobile → va a capo (2 o 3 per riga) */
+@media (max-width: 768px) {
+    .emotion-row {
+        flex-wrap: wrap;           /* Qui permette di andare a capo */
+        justify-content: center;
+        gap: 28px 20px;
+    }
+    .emotion {
+        min-width: 90px;
+    }
+    .emotion span {
+        font-size: 2.4rem;
+        padding: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scale-title {
+        font-size: 2.4rem;
+    }
+    .emotion-row {
+        gap: 22px 15px;
+    }
+}
