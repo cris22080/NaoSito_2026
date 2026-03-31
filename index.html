@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Not An Object - Building the Future of Robotics</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="discover-additions.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -30,7 +31,6 @@
             </ul>
         </div>
     </nav>
-    
 
     <section class="hero">
         <div class="hero-background"></div>
@@ -55,7 +55,84 @@
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <!-- ===== NUOVA SEZIONE DISCOVER ===== -->
+    <section class="discover-section" id="discover">
+        <div class="discover-container">
 
+            <div class="discover-header">
+                <span class="discover-label">Esplora il Progetto</span>
+                <h2>Tutto quello che c'è da <span class="highlight-purple">sapere</span></h2>
+                <p>Dal riconoscimento delle emozioni al team che lo ha reso possibile: scopri ogni aspetto di Not An Object.</p>
+            </div>
+
+            <div class="discover-grid">
+
+                <!-- Card 1: Programma Emozioni -->
+                <div class="discover-card" data-delay="0">
+                    <div class="card-glow glow-blue"></div>
+                    <div class="card-top">
+                        <div class="card-icon-wrap blue-gradient">
+                            <span class="card-emoji">🧠</span>
+                        </div>
+                        <span class="card-tag">Psicologia & AI</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Programma Emozioni</h3>
+                        <p>Nao non è solo un robot — è un osservatore empatico. Attraverso algoritmi di visione artificiale, riconosce le emozioni umane sui volti e risponde in modo coerente, trasformando ogni interazione in un dialogo autentico.</p>
+                    </div>
+                    <a href="emozioni.html" class="card-btn card-btn-blue">
+                        Scopri le Emozioni
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <!-- Card 2: Team -->
+                <div class="discover-card card-featured" data-delay="150">
+                    <div class="card-glow glow-yellow"></div>
+                    <div class="card-top">
+                        <div class="card-icon-wrap orange-gradient">
+                            <span class="card-emoji">👥</span>
+                        </div>
+                        <span class="card-tag">Persone</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Il Nostro Team</h3>
+                        <p>Otto studenti appassionati, un professore visionario e un robot da far evolvere. Conosci i developer, i video maker e i creativi che ogni giorno portano avanti il sogno di Not An Object.</p>
+                    </div>
+                    <a href="team.html" class="card-btn card-btn-yellow">
+                        Conosci il Team
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <!-- Card 3: Scuola -->
+                <div class="discover-card" data-delay="300">
+                    <div class="card-glow glow-purple"></div>
+                    <div class="card-top">
+                        <div class="card-icon-wrap purple-gradient">
+                            <span class="card-emoji">🏫</span>
+                        </div>
+                        <span class="card-tag">Istruzione</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>La Scuola</h3>
+                        <p>Nato all'interno dell'Istituto Tecnico Tecnologico M.Buonarroti di Trento, Not An Object è un progetto scolastico che unisce robotica, informatica e creatività per formare la generazione di domani.</p>
+                    </div>
+                    <a href="school.html" class="card-btn card-btn-purple">
+                        Visita la Scuola
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ===== FINE SEZIONE DISCOVER ===== -->
+
+    <footer>
+        <p>© 2026 <span>Not An Object</span> · Istituto Tecnico Tecnologico M.Buonarroti · Trento</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
