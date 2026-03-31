@@ -1152,3 +1152,15 @@ footer span { color: #FFB800; font-weight: 600; }
     font-weight: 500;
     white-space: nowrap;
 }
+.emotion span.emotion-name {
+    font-size: 0.65rem !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-weight: 400 !important;
+    white-space: nowrap !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    display: block !important;
+}
