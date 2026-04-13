@@ -4,30 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programma Emozioni - Not An Object</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
+    
 </head>
 <body>
 
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
+            <a href="../index.html" class="logo">
                 <div class="logo-icon">
-                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
-                        <rect width="24" height="24" rx="6" fill="#4A90E2"/>
-                        <rect x="6" y="6" width="5" height="5" rx="1" fill="white"/>
-                        <rect x="13" y="6" width="5" height="5" rx="1" fill="white"/>
-                        <rect x="6" y="13" width="5" height="5" rx="1" fill="white"/>
-                        <rect x="13" y="13" width="5" height="5" rx="1" fill="white"/>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <rect x="3" y="3" width="7" height="7" rx="2" fill="white"/>
+                        <rect x="14" y="3" width="7" height="7" rx="2" fill="white"/>
+                        <rect x="3" y="14" width="7" height="7" rx="2" fill="white"/>
+                        <rect x="14" y="14" width="7" height="7" rx="2" fill="white"/>
                     </svg>
                 </div>
-                <span>Not An Object</span>
-            </div>
+                Not An <span>Object</span>
+            </a>
             <ul class="nav-links">
-                <li><a href="index.html">About</a></li>
-                <li><a href="emozioni.html">Programma Emozioni</a></li>
+                <li><a href="../index.html">About</a></li>
+                <li><a href="emozioni.html" class="active">Programma Emozioni</a></li>
                 <li><a href="team.html">Team</a></li>
                 <li><a href="school.html">Scuola</a></li>
             </ul>
@@ -36,21 +35,22 @@
 
     <!-- HERO -->
     <section class="hero">
-        <div class="hero-background"></div>
+        <div class="hero-bg"></div>
         <div class="hero-content">
             <div class="hero-text">
-                <div class="badge">Psicologia & AI</div>
+                <div class="badge">
+                    <i class="fa-solid fa-brain" style="font-size:0.7rem;"></i>
+                    Psicologia &amp; AI
+                </div>
                 <h1>Le <span class="highlight">Emozioni</span></h1>
                 <p>
-                    Un viaggio nelle emozioni umane e negli studiosi che le hanno analizzate. 
-                    Dalla psicologia classica alla ricerca moderna.
+                    Un viaggio nelle emozioni umane vissute e ricreate da un robot programmabile. </p> 
+                    <p>Un piccolo passo verso futuro ma un grande passo per noi</p>
                 </p>
                 <div class="hero-buttons">
                     <a href="#emozioni" class="btn btn-primary">Scopri la Scala</a>
-                    <a href="#" class="btn btn-secondary">Approfondisci</a>
                 </div>
             </div>
-
             <div class="hero-image">
                 <div class="image-frame">
                     <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="Emozioni umane">
@@ -59,147 +59,144 @@
         </div>
     </section>
 
-    <!-- SEZIONE SCALA DELLE EMOZIONI (MIGLIORATA) -->
-    <section id="emozioni" class="emotion-scale-section">
-        <h2 class="scale-title">Le Emozioni</h2>
+    <!-- SEZIONE EMOZIONI -->
+    <section id="emozioni" class="emotion-section">
+        <div class="section-inner">
 
-        <div class="emotion-map">
-            <!-- Cuore -->
-            <div class="heart">❤️</div>
-            <div class="main-line"></div>
+            <div class="section-header">
+                <span class="section-eyebrow">Programma</span>
+                <h2 class="section-title">Le Emozioni</h2>
+                <p class="section-subtitle">Ogni emozione analizzata, mappata e raccontata da chi la studia</p>
+            </div>
 
-            <!-- Griglia Emozioni Responsive -->
-            <div class="emotion-row">
-                <div class="emotion">
-                    <span>😊</span>
-                    <p>Felicità</p>
-                    <div class="emotion-author">
-                    <div class="emotion-line"></div>
-                    <span class="emotion-name">Mario Rossi</span>
-                    </div>
+            <div class="heart-connector">
+                <span class="heart-icon">❤️</span>
+                <div class="heart-stem"></div>
+            </div>
+
+            <div class="emotion-grid">
+
+                <div class="emotion-card ec-felicita">
+                    <div class="emoji-bubble">😊</div>
+                    <span class="emotion-label">Felicità</span>
+                    <div class="emotion-divider"></div>
+                    <span class="emotion-author">Mario Rossi</span>
                 </div>
-                <div class="emotion">
-                    <span>😡</span>
-                    <p>Rabbia</p>
-                    <div class="emotion-author">
-                    <div class="emotion-line"></div>
-                    <span class="emotion-name">Gaia Tononi</span>
-                    </div>
+
+                <div class="emotion-card ec-rabbia">
+                    <div class="emoji-bubble">😡</div>
+                    <span class="emotion-label">Rabbia</span>
+                    <div class="emotion-divider"></div>
+                    <span class="emotion-author">Gaia Tononi</span>
                 </div>
-                <div class="emotion">
-                    <span>😢</span>
-                    <p>Tristezza</p>
-                    <div class="emotion-author">
-                    <div class="emotion-line"></div>
-                    <span class="emotion-name">Mario Rossi</span>
-                    </div>
+
+                <div class="emotion-card ec-tristezza">
+                    <div class="emoji-bubble">😢</div>
+                    <span class="emotion-label">Tristezza</span>
+                    <div class="emotion-divider"></div>
+                    <span class="emotion-author">Mario Rossi</span>
                 </div>
-                <div class="emotion">
-                    <span>😨</span>
-                    <p>Paura</p>
-                    <div class="emotion-author">
-                    <div class="emotion-line"></div>
-                    <span class="emotion-name">Matteo Michelon</span>
-                    </div>
+
+                <div class="emotion-card ec-paura">
+                    <div class="emoji-bubble">😨</div>
+                    <span class="emotion-label">Paura</span>
+                    <div class="emotion-divider"></div>
+                    <span class="emotion-author">Matteo Michelon</span>
                 </div>
-                <div class="emotion">
-                    <span>🤢</span>
-                    <p>Disgusto</p>
-                    <div class="emotion-author">
-                    <div class="emotion-line"></div>
-                    <span class="emotion-name">Mario Rossi</span>
-                    </div>
+
+                <div class="emotion-card ec-disgusto">
+                    <div class="emoji-bubble">🤢</div>
+                    <span class="emotion-label">Disgusto</span>
+                    <div class="emotion-divider"></div>
+                    <span class="emotion-author">Mario Rossi</span>
                 </div>
-                <div class="emotion">
-                    <span>😐</span>
-                    <p>Noia</p>
-                    <div class="emotion-author">
-                    <div class="emotion-line"></div>
-                    <span class="emotion-name">Cristopher Facchinelli</span>
-                    </div>
+
+                <div class="emotion-card ec-noia">
+                    <div class="emoji-bubble">😐</div>
+                    <span class="emotion-label">Noia</span>
+                    <div class="emotion-divider"></div>
+                    <span class="emotion-author">Cristopher Facchinelli</span>
                 </div>
-                <div class="emotion">
-                    <span>😳</span>
-                    <p>Imbarazzo</p>
-                    <div class="emotion-author">
-                    <div class="emotion-line"></div>
-                    <span class="emotion-name">Ylenia Bais</span>
-                    </div>
+
+                <div class="emotion-card ec-imbarazzo">
+                    <div class="emoji-bubble">😳</div>
+                    <span class="emotion-label">Imbarazzo</span>
+                    <div class="emotion-divider"></div>
+                    <span class="emotion-author">Ylenia Bais</span>
                 </div>
-                <div class="emotion">
-                    <span>😒</span>
-                    <p>Invidia</p>
-                    <div class="emotion-author">
-                    <div class="emotion-line"></div>
-                    <span class="emotion-name">Mario Rossi</span>
-                    </div>
+
+                <div class="emotion-card ec-invidia">
+                    <div class="emoji-bubble">😒</div>
+                    <span class="emotion-label">Invidia</span>
+                    <div class="emotion-divider"></div>
+                    <span class="emotion-author">Mario Rossi</span>
                 </div>
-                <div class="emotion">
-                    <span>🥲</span>
-                    <p>Nostalgia</p>
-                    <div class="emotion-author">
-                    <div class="emotion-line"></div>
-                    <span class="emotion-name">Mario Rossi</span>
-                    </div>
+
+                <div class="emotion-card ec-nostalgia">
+                    <div class="emoji-bubble">🥲</div>
+                    <span class="emotion-label">Nostalgia</span>
+                    <div class="emotion-divider"></div>
+                    <span class="emotion-author">Mario Rossi</span>
                 </div>
-                <div class="emotion">
-                    <span>🫦</span>
-                    <p>Ansia</p>
-                    <div class="emotion-author">
-                    <div class="emotion-line"></div>
-                    <span class="emotion-name">Ylenia Bais</span>
-                    </div>
+
+                <div class="emotion-card ec-ansia">
+                    <div class="emoji-bubble">🫦</div>
+                    <span class="emotion-label">Ansia</span>
+                    <div class="emotion-divider"></div>
+                    <span class="emotion-author">Ylenia Bais</span>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
-       <footer>
+    <footer>
+        <div class="footer-accent-bar"></div>
         <div class="footer-inner">
             <div class="footer-grid">
 
-                <!-- Colonna 1: Brand -->
+                <!-- Brand -->
                 <div class="footer-col footer-brand">
                     <a href="#" class="footer-logo">
                         <i class="fa-solid fa-robot"></i>
                         Not An <span>Object</span>
                     </a>
-                    <p class="footer-school">
-                        ITT M. Buonarroti · Trento
-                    </p>
+                    <p class="footer-school">ITT M. Buonarroti · Trento</p>
                     <p class="footer-desc">
-                        Un progetto scolastico che esplora l'intelligenza emotiva artificiale. Nato a Trento, per il
-                        futuro.
+                        Un progetto scolastico che esplora l'intelligenza emotiva artificiale. Nato a Trento, per il futuro.
                     </p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/_notanobject__?igsh=MWtkamkzZDRjNnhyZw=="
-                            aria-label="Instagram"><i class="fa-brands fa-instagram" target="_blank"></i></a>
-                        <a href="https://github.com/cris22080/NaoSito_2026" aria-label="GitHub" target="_blank"><i
-                                class="fa-brands fa-github"></i></a>
-                        <a href="" aria-label="YouTube"><i class="fa-brands fa-youtube" target="_blank"></i></a>
+                        <a href="https://www.instagram.com/_notanobject__?igsh=MWtkamkzZDRjNnhyZw==" aria-label="Instagram" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/cris22080/NaoSito_2026" aria-label="GitHub" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="" aria-label="YouTube" target="_blank">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
                     </div>
                 </div>
 
-
+                <!-- Contatti -->
                 <div class="footer-col">
                     <h4>Contatti</h4>
                     <ul class="footer-contact-list">
                         <li>
                             <i class="fa-solid fa-envelope"></i>
-                            <a href="mailto:info@notanobject.it">nao@buonarroti.tn.it</a>
+                            <a href="mailto:nao@buonarroti.tn.it">nao@buonarroti.tn.it</a>
                         </li>
                         <li>
                             <i class="fa-solid fa-location-dot"></i>
                             Via Buonarroti 1<br>38122 Trento TN
                         </li>
-
                     </ul>
                 </div>
 
-                <!-- Colonna 3: Privacy -->
+                <!-- Privacy -->
                 <div class="footer-col">
-                    <h4>Privacy & Dati</h4>
+                    <h4>Privacy &amp; Dati</h4>
                     <ul class="footer-link-list">
                         <li><a href="">Informativa Privacy</a></li>
                         <li><a href="">Cookie Policy</a></li>
@@ -213,13 +210,13 @@
                     </div>
                 </div>
 
-                <!-- Colonna 4: Licenze -->
+                <!-- Licenze -->
                 <div class="footer-col">
-                    <h4>Licenze & Legale</h4>
+                    <h4>Licenze &amp; Legale</h4>
                     <ul class="footer-link-list">
                         <li><a href="">Licenza del Progetto</a></li>
                         <li><a href="">Termini di Utilizzo</a></li>
-                        <li><a href="">Crediti & Attribuzioni</a></li>
+                        <li><a href="">Crediti &amp; Attribuzioni</a></li>
                         <li><a href="">Componenti Open Source</a></li>
                         <li><a href="">Note Legali</a></li>
                     </ul>
@@ -232,7 +229,6 @@
             </div>
         </div>
 
-        <!-- Bottom bar -->
         <div class="footer-bottom">
             <p class="footer-copy">
                 © 2026 <strong>Not An Object</strong> · ITT M. Buonarroti · Trento · Tutti i diritti riservati
